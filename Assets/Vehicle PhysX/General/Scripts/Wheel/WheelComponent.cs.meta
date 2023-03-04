@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c389e3de65d0214588b3e507c008ae9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - visualTreeAsset: {fileID: 9197481963319205126, guid: 23b7a0f5a261a7a4e8cdf2d74ccba286, type: 3}
+  - wheelTransform: {instanceID: 0}
+  - caliperTransform: {instanceID: 0}
+  - vehicleRigidbody: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

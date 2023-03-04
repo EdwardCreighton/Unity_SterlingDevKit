@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f834873ff40fb1343ab3124f0fdee441
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - suspensionProfile: {fileID: 11400000, guid: 2257a7496e422d24f8feb629577a18cf, type: 2}
+  - frictionProfile: {fileID: 11400000, guid: a489f238cc5b6264c8735386d0211323, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

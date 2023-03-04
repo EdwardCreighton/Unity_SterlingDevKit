@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:ToolbarSpacer focusable="false" style="height: 5px;" />
+    <ui:EnumField label="Update Mode" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" value="Center" binding-path="updateMode" />
+    <uie:ToolbarSpacer focusable="false" style="height: 10px;" />
+    <ui:Label tabindex="-1" text="WHEEL REFERENCES" display-tooltip-when-elided="true" enable-rich-text="true" usage-hints="None" style="opacity: 1; display: flex; visibility: visible; overflow: visible; -unity-text-align: middle-center; white-space: nowrap; -unity-font-style: bold; font-size: 15px; max-height: none; max-width: none; -unity-font: none; letter-spacing: 0;" />
+    <uie:ObjectField label="Wheel Transform" binding-path="wheelTransform" type="UnityEngine.Transform, UnityEngine.CoreModule" />
+    <uie:ObjectField label="Caliper Transform" binding-path="caliperTransform" type="UnityEngine.Transform, UnityEngine.CoreModule" />
+    <uie:ToolbarSpacer focusable="true" style="height: 10px;" />
+    <ui:Label tabindex="-1" text="VEHICLE REFERENCES" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 15px; -unity-text-outline-width: 0; letter-spacing: 0; word-spacing: 0; -unity-font: url(&apos;project://database/Assets/_General/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&apos;);" />
+    <uie:ObjectField label="Vehicle Rigidbody" binding-path="vehicleRigidbody" type="UnityEngine.Rigidbody, UnityEngine.PhysicsModule" />
+    <uie:PropertyField label="Vehicle Body Colliders" binding-path="vehicleBodyColliders" focusable="true" />
+    <uie:ToolbarSpacer focusable="false" style="height: 10px;" />
+    <uie:PropertyField label="Wheel Data" binding-path="wheelData" focusable="true" />
+</ui:UXML>
