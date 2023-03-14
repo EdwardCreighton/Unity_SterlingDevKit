@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using SterlingTools;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,8 +9,6 @@ namespace SterlingAssets
 	{
 		#region Fields
 
-		[SerializeField] private List<string> names;
-
 		private SterlingInput sterlingInput;
 		private PlayerInput playerInput;
 
@@ -21,7 +18,6 @@ namespace SterlingAssets
 		
 		public bool DontDestroyOnLoadValue => true;
 
-		public SterlingInput SterlingInput => sterlingInput;
 		public SterlingInput.CarActions CarActions => sterlingInput.Car;
 		public SterlingInput.PlayerActions PlayerActions => sterlingInput.Player;
 		public SterlingInput.UIActions UIActions => sterlingInput.UI;
@@ -30,45 +26,41 @@ namespace SterlingAssets
 
 		private void Awake()
 		{
-			
-		}
-
-		private void OnValidate()
-		{
+			sterlingInput = new SterlingInput();
 			playerInput = GetComponent<PlayerInput>();
-			
-			names.Clear();
-
-			foreach (var actionMap in playerInput.actions.actionMaps)
-			{
-				names.Add(actionMap.name);
-			}
+			playerInput.actions = sterlingInput.asset;
 		}
 
 		public Vector2 GetPointerDeltaInput()
 		{
-			return Vector2.zero;
-
-			/*switch (activeActionMap)
+			string currentActionMapName = playerInput.currentActionMap.name;
+			
+			if (currentActionMapName == GetActionName(PlayerActions.ToString()))
 			{
-				case ActionMap.Car:
-				{
-					return CarActions.LookCamera.ReadValue<Vector2>();
-				}
-				case ActionMap.Player:
-				{
-					return PlayerActions.Look.ReadValue<Vector2>();
-				}
-				case ActionMap.UI:
-				{
-					return UIActions.Navigate.ReadValue<Vector2>();
-				}
-				default:
-				{
-					Debug.LogError($"Missing Action Map description in {typeof(ActionMap)}.");
-					return Vector2.zero;
-				}
-			}*/
+				return PlayerActions.Look.ReadValue<Vector2>();
+			}
+
+			if (currentActionMapName == GetActionName(CarActions.ToString()))
+			{
+				return CarActions.LookCamera.ReadValue<Vector2>();
+			}
+
+			if (currentActionMapName == GetActionName(UIActions.ToString()))
+			{
+				return UIActions.Navigate.ReadValue<Vector2>();
+			}
+
+			return Vector2.zero;
+		}
+
+		private string GetActionName(string fullName)
+		{
+			int concatIndex = fullName.IndexOf('+');
+
+			string temp = concatIndex >= 0 ? fullName.Substring(concatIndex + 1) : fullName;
+
+			// ...Actions
+			return temp[new Range(0, temp.Length - 7)];
 		}
 	}
 }
