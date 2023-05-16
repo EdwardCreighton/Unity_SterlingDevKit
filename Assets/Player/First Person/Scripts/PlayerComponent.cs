@@ -1,11 +1,9 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SterlingAssets.Player.POV
 {
 	[SelectionBase]
-	public partial class PlayerComponent : MonoBehaviour
+	public partial class PlayerComponent : GameLoopEntity
 	{
 		#region Fields
 
@@ -25,8 +23,10 @@ namespace SterlingAssets.Player.POV
 
 		#endregion
 
-		private void Awake()
+		public override void OnAwake()
 		{
+			base.OnAwake();
+			
 			SetRigidbodyRef();
 			SetRigidbody();
 			SetColliderRef();
@@ -35,78 +35,25 @@ namespace SterlingAssets.Player.POV
 			SetModulesRefs();
 		}
 
-		private void Update()
+		public override void OnUpdate()
 		{
+			base.OnUpdate();
+			
 			if (movementModule) movementModule.OnUpdate();
 		}
 
-		private void FixedUpdate()
+		public override void OnFixedUpdate()
 		{
+			base.OnFixedUpdate();
+			
 			if (movementModule) movementModule.OnFixedUpdate();
 		}
 
-		private void LateUpdate()
+		public override void OnLateUpdate()
 		{
+			base.OnLateUpdate();
+			
 			if (movementModule) movementModule.OnLateUpdate();
-		}
-
-		private void OnCollisionEnter(Collision collision)
-		{
-			List<ContactPoint> contactPoints = new List<ContactPoint>();
-			collision.GetContacts(contactPoints);
-
-			playerData.collisionPoints = contactPoints;
-		}
-
-		private void OnCollisionStay(Collision collision)
-		{
-			List<ContactPoint> contactPoints = new List<ContactPoint>();
-			collision.GetContacts(contactPoints);
-			
-			playerData.collisionPoints = contactPoints;
-		}
-
-		private void OnCollisionExit(Collision collision)
-		{
-			/*List<ContactPoint> contactPoints = new List<ContactPoint>();
-			collision.GetContacts(contactPoints);
-			
-			UpdateCollisionPoints(contactPoints, true);*/
-		}
-
-		private void UpdateCollisionPoints(List<ContactPoint> contactPoints, bool remove)
-		{
-			/*if (remove)
-			{
-				foreach (ContactPoint contactPoint in contactPoints)
-				{
-					if (playerData.collisionPoints.Contains(contactPoint))
-					{
-						playerData.collisionPoints.Remove(contactPoint);
-					}
-				}
-
-				return;
-			}
-
-			foreach (ContactPoint contactPoint in contactPoints)
-			{
-				
-
-				playerData.collisionPoints.Add(contactPoint);
-			}*/
-		}
-
-		private void OnDrawGizmos()
-		{
-			if (!Application.isPlaying) return;
-
-			Gizmos.color = Color.red;
-			
-			foreach (ContactPoint contact in playerData.collisionPoints)
-			{
-				Gizmos.DrawSphere(contact.point, 0.1f);
-			}
 		}
 	}
 }
