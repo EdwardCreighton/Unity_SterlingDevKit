@@ -799,7 +799,7 @@ Transform:
   - {fileID: 977015387}
   - {fileID: 1497287790}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218632218
 GameObject:
@@ -1044,7 +1044,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16f239ec7e3d15468acbfe3de6ff1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameLoopEntities: []
+  gameLoopEntities:
+  - {fileID: 963175243}
+  - {fileID: 831052554}
 --- !u!1 &233592746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2873,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 1
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -2883,10 +2885,10 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 88.50715
+  field of view: 80
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2908,13 +2910,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831052549}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5, y: 1.8, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1122746454}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &831052553
 MonoBehaviour:
@@ -2983,7 +2985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yawSensitivity: 15
-  pitchSensitivity: 10
+  pitchSensitivity: 13
   maxPitch: 89
   minPitch: -89
   yAxisInvert: 1
@@ -3360,7 +3362,7 @@ Transform:
   - {fileID: 1088672850}
   - {fileID: 1046283126}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963175245
 MonoBehaviour:
@@ -3689,7 +3691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: f0d5f11fa25a66945bb3e466c498e339, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -3722,19 +3724,7 @@ MonoBehaviour:
     m_ActionId: a4449911-64b8-4a21-8af1-3d5d28ef1186
     m_ActionName: Car/GearShift[/Keyboard/k,/Keyboard/i]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1058406605}
-        m_TargetAssemblyTypeName: SterlingAssets.SterlingInputManager, Assembly-CSharp
-        m_MethodName: PlayerActionMap_OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: b71b0b39-a993-4a8b-99ca-7337c9f9aaf4
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
@@ -3976,8 +3966,9 @@ Transform:
   - {fileID: 1634603082}
   - {fileID: 1058406603}
   - {fileID: 225978962}
+  - {fileID: 831052552}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1139817988
 GameObject:

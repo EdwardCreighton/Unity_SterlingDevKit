@@ -45,7 +45,7 @@ namespace SterlingTools
 
 			foreach (var executable in executables)
 			{
-				executable.ExecuteInEditMode();
+				executable.UpdateInEditMode();
 			}
 		}
 	}

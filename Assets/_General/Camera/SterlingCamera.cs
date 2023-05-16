@@ -1,4 +1,3 @@
-using System;
 using SterlingTools;
 using UnityEngine;
 
@@ -6,7 +5,7 @@ namespace SterlingAssets
 {
 	[DefaultExecutionOrder(100)]
 	[RequireComponent(typeof(Camera))]
-	public class SterlingCamera : SingletonMono<SterlingCamera>, IExecuteInEditMode
+	public class SterlingCamera : SingletonGameLoopInstance<SterlingCamera>, IExecuteInEditMode
 	{
 		#region Fields
 
@@ -18,7 +17,7 @@ namespace SterlingAssets
 
 		#endregion
 
-		private void Awake()
+		public override void OnAwake()
 		{
 			TryGetComponent(out controller);
 
@@ -27,7 +26,7 @@ namespace SterlingAssets
 			data.camera = GetComponent<Camera>();
 		}
 		
-		private void LateUpdate()
+		public override void OnLateUpdate()
 		{
 			if (!controller) return;
 				
@@ -37,18 +36,7 @@ namespace SterlingAssets
 			controller.OnLateUpdate();
 		}
 
-		public void RequestCameraTask(Action<CameraData> task)
-		{
-			controller.SetTask(task);
-		}
-
-		[ContextMenu("Run Test Task")]
-		private void RunTask()
-		{
-			RequestCameraTask(CameraCutscenes.TestTask);
-		}
-
-		public void ExecuteInEditMode()
+		public void UpdateInEditMode()
 		{
 			if (!controller)
 			{

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SterlingTools
 {
-	public abstract class SingletonMono<T> : MonoBehaviour where T : MonoBehaviour
+	public abstract class SingletonGameLoopInstance<T> : SterlingAssets.GameLoopEntity where T : SterlingAssets.GameLoopEntity
 	{
 		private static T ins;
 

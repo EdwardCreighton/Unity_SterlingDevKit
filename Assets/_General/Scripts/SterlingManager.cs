@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SterlingAssets
 {
-	public class SterlingManager : SingletonMono<SterlingManager>
+	public class SterlingManager : SingletonMonoBehaviour<SterlingManager>
 	{
 		protected void Awake()
 		{

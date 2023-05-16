@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace SterlingAssets
 {
-	public class SterlingInputManager : SingletonMono<SterlingInputManager>
+	public class SterlingInputManager : SingletonMonoBehaviour<SterlingInputManager>
 	{
 		#region Fields
 
@@ -33,17 +33,17 @@ namespace SterlingAssets
 		{
 			string currentActionMapName = playerInput.currentActionMap.name;
 			
-			if (currentActionMapName == GetActionName(PlayerActions.ToString()))
+			if (currentActionMapName == GetActionMapName(PlayerActions.ToString()))
 			{
 				return PlayerActions.Look.ReadValue<Vector2>();
 			}
 
-			if (currentActionMapName == GetActionName(CarActions.ToString()))
+			if (currentActionMapName == GetActionMapName(CarActions.ToString()))
 			{
 				return CarActions.LookCamera.ReadValue<Vector2>();
 			}
 
-			if (currentActionMapName == GetActionName(UIActions.ToString()))
+			if (currentActionMapName == GetActionMapName(UIActions.ToString()))
 			{
 				return UIActions.Navigate.ReadValue<Vector2>();
 			}
@@ -51,7 +51,7 @@ namespace SterlingAssets
 			return Vector2.zero;
 		}
 
-		private string GetActionName(string fullName)
+		private string GetActionMapName(string fullName)
 		{
 			int concatIndex = fullName.IndexOf('+');
 

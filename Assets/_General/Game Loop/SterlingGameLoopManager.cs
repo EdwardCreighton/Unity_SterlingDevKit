@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SterlingAssets
 {
-	public class SterlingGameLoopManager : SingletonMono<SterlingGameLoopManager>
+	public class SterlingGameLoopManager : SingletonMonoBehaviour<SterlingGameLoopManager>
 	{
 		[SerializeField] private List<GameLoopEntity> gameLoopEntities;
 
