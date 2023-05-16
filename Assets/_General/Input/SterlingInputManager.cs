@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace SterlingAssets
 {
-	public class SterlingInputManager : SingletonMono<SterlingInputManager>, IDontDestroyOnLoad
+	public class SterlingInputManager : SingletonMono<SterlingInputManager>
 	{
 		#region Fields
 
@@ -15,8 +15,6 @@ namespace SterlingAssets
 		#endregion
 
 		#region Getters
-		
-		public bool DontDestroyOnLoadValue => true;
 
 		public SterlingInput.CarActions CarActions => sterlingInput.Car;
 		public SterlingInput.PlayerActions PlayerActions => sterlingInput.Player;

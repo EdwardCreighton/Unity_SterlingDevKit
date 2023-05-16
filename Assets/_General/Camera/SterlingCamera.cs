@@ -6,7 +6,7 @@ namespace SterlingAssets
 {
 	[DefaultExecutionOrder(100)]
 	[RequireComponent(typeof(Camera))]
-	public class SterlingCamera : SingletonMono<SterlingCamera>, IDontDestroyOnLoad, IExecuteInEditMode
+	public class SterlingCamera : SingletonMono<SterlingCamera>, IExecuteInEditMode
 	{
 		#region Fields
 
@@ -15,7 +15,6 @@ namespace SterlingAssets
 		private CameraControllerBase controller;
 		
 		public CameraData CameraData => data;
-		bool IDontDestroyOnLoad.DontDestroyOnLoadValue => false;
 
 		#endregion
 

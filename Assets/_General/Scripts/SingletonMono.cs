@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SterlingTools
 {
-	public abstract class SingletonMono<T> : MonoBehaviour where T : MonoBehaviour, IDontDestroyOnLoad
+	public abstract class SingletonMono<T> : MonoBehaviour where T : MonoBehaviour
 	{
 		private static T ins;
 
@@ -19,17 +19,10 @@ namespace SterlingTools
 						GameObject gameObject = new GameObject(typeof(T).ToString());
 						ins = gameObject.AddComponent<T>();
 					}
-					
-					if (ins.DontDestroyOnLoadValue) DontDestroyOnLoad(ins.gameObject);
 				}
 
 				return ins;
 			}
 		}
-	}
-
-	public interface IDontDestroyOnLoad
-	{
-		public bool DontDestroyOnLoadValue { get; }
 	}
 }
