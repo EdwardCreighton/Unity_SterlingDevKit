@@ -25,7 +25,7 @@ namespace SterlingAssets
 
 			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
 			{
-				gameLoopEntity.OnAwake();
+				if (gameLoopEntity.enabled) gameLoopEntity.OnAwake();
 			}
 		}
 
@@ -35,7 +35,7 @@ namespace SterlingAssets
 
 			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
 			{
-				gameLoopEntity.OnStart();
+				if (gameLoopEntity.enabled) gameLoopEntity.OnStart();
 			}
 		}
 
@@ -45,7 +45,7 @@ namespace SterlingAssets
 
 			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
 			{
-				gameLoopEntity.OnUpdate();
+				if (gameLoopEntity.enabled) gameLoopEntity.OnUpdate();
 			}
 		}
 
@@ -55,7 +55,7 @@ namespace SterlingAssets
 
 			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
 			{
-				gameLoopEntity.OnLateUpdate();
+				if (gameLoopEntity.enabled) gameLoopEntity.OnLateUpdate();
 			}
 		}
 
@@ -65,7 +65,7 @@ namespace SterlingAssets
 
 			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
 			{
-				gameLoopEntity.OnFixedUpdate();
+				if (gameLoopEntity.enabled) gameLoopEntity.OnFixedUpdate();
 			}
 		}
 	}
