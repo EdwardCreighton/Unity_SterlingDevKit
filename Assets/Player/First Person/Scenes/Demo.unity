@@ -2910,7 +2910,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 831052549}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 1.8, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2968,7 +2968,7 @@ MonoBehaviour:
     followPoint: {fileID: 1046283126}
     followTarget: {x: -5, y: 1.8, z: -5}
     followOffset: {x: 0, y: 0, z: 0}
-    lookAtTarget: {x: 5.3607244, y: 1.9460634, z: -5.6}
+    lookAtTarget: {x: 4.04, y: 4.04, z: -5.6}
     inputDelta: {x: 0, y: 0, z: 0}
     followOffsetEulerAngles: {x: 0, y: 0}
     lookAtTargetEulerAngles: {x: -0, y: 0}
@@ -5419,7 +5419,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1634603082}
   - component: {fileID: 1634603081}
-  - component: {fileID: 1634603084}
   m_Layer: 0
   m_Name: Sterling Manager
   m_TagString: Untagged
@@ -5454,19 +5453,6 @@ Transform:
   m_Father: {fileID: 1122746454}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1634603084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634603080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7db14f6cf8181cc4e938744b7bdc6289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  executablesCount: 1
 --- !u!1 &1636973194
 GameObject:
   m_ObjectHideFlags: 0
