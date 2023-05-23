@@ -1,0 +1,15 @@
+{
+  "title": "CSR 2 Car Visual Spec Data",
+  "source": "NaturalMotion/CSR2",
+  "export": ".CSB",
+  "data": [
+    {
+      "id": "Spec_01",
+      "caliper": "Caliper_01",
+      "paint": "Paint_01",
+      "interior": "Interior_01",
+      "livery": "Livery_01",
+      "wheel": "1A"
+    }
+  ]
+}

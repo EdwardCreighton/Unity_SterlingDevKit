@@ -11832,7 +11832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1206244949
 Transform:
   m_ObjectHideFlags: 0
@@ -12386,16 +12386,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59943cf917828e54a878bdd3fc694642, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraProfile: {fileID: 11400000, guid: 3195dbe57feeee845b9d1faa2ecbb5ec, type: 2}
-  cameraData:
-    camera: {fileID: 0}
-    followTarget: {x: 0, y: 0, z: 0}
-    followOffset: {x: 0, y: 0, z: 0}
-    lookAtTarget: {x: 0, y: 0, z: 0}
-    inputDelta: {x: 0, y: 0, z: 0}
-    followOffsetEulerAngles: {x: 0, y: 0}
-  followTransform: {fileID: 1206244949}
-  offset: {x: 0, y: 1, z: 0}
 --- !u!1 &1229582576
 GameObject:
   m_ObjectHideFlags: 0

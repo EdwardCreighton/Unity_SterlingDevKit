@@ -1,0 +1,15 @@
+{
+  "title": "CSR 2 Car Paint Data",
+  "source": "NaturalMotion/CSR2",
+  "export": ".CSB",
+  "data": [
+    {
+      "id": "Paint_01",
+      "name": "Ford Dark Highland Green",
+      "type": "Metallic",
+      "diffuseColor": "(24, 27, 23, 255)",
+      "metallicColor": "(72, 94, 77, 255)",
+      "glossiness": 1.0
+    }
+  ]
+}

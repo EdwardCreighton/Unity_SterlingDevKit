@@ -1,0 +1,19 @@
+{
+  "title": "CSR 2 Car Interior Data",
+  "source": "NaturalMotion/CSR2",
+  "export": ".CSB",
+  "data": [
+    {
+      "id": "Interior_01",
+      "zone1": {
+        "name": "Ford Ebony",
+        "diffuseColor": "(51, 51, 51, 255)"
+      },
+      "zone2": {
+        "name": "Ford Ebony",
+        "diffuseColor": "(51, 51, 51, 255)"
+      },
+      "interiorTillingIndex": 0
+    }
+  ]
+}

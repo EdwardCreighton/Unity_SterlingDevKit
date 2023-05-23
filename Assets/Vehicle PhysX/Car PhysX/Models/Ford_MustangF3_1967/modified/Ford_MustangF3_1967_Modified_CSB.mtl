@@ -1,0 +1,401 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 10.10.2020 23:25:11
+
+newmtl wire_177088027
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 0.6941 0.3451 0.1059
+	Kd 0.6941 0.3451 0.1059
+	Ks 0.3500 0.3500 0.3500
+
+newmtl GlassClear
+	Ns 50.0000
+	Ni 1.5000
+	d 0.3000
+	Tr 0.7000
+	Tf 0.3000 0.3000 0.3000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.4500 0.4500 0.4500
+	Ke 0.0000 0.0000 0.0000
+
+newmtl GlassRed
+	Ns 30.0000
+	Ni 1.5000
+	d 0.8500
+	Tr 0.1500
+	Tf 0.8500 0.8500 0.8500 
+	illum 2
+	Ka 0.1961 0.0000 0.0000
+	Kd 0.1961 0.0000 0.0000
+	Ks 0.4500 0.4500 0.4500
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Window
+	Ns 50.0000
+	Ni 1.5000
+	d 0.7000
+	Tr 0.3000
+	Tf 0.7000 0.7000 0.7000 
+	illum 2
+	Ka 0.0275 0.0275 0.0275
+	Kd 0.0275 0.0275 0.0275
+	Ks 0.4500 0.4500 0.4500
+	Ke 0.0000 0.0000 0.0000
+
+newmtl CSR2_Coloured
+	Ns 25.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0196 0.0196 0.0196
+	Kd 0.0196 0.0196 0.0196
+	Ks 0.0450 0.0450 0.0450
+	Ke 0.0000 0.0000 0.0000
+
+newmtl CSR2_CarPaint
+	Ns 100.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0196 0.0196 0.0196
+	Kd 0.0055 0.0072 0.0050
+	Ks 0.1857 0.3339 0.2153
+	Ke 0.0000 0.0000 0.0000
+
+newmtl CSR2_OEM_Ford_MustangF3_1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\OEM_Ford_MustangF3_1_diff.png
+	map_Kd maps\OEM_Ford_MustangF3_1_diff.png
+	map_d maps\OEM_Ford_MustangF3_1_opac.png
+
+newmtl CSR2_Light
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0196 0.0196 0.0196
+	Kd 0.0196 0.0196 0.0196
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Light_diff.png
+	map_Kd maps\Light_diff.png
+
+newmtl CSR2_Interior
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Interior_diff.png
+	map_Kd maps\Interior_diff.png
+	map_bump maps\Interior_nrml.png
+	bump maps\Interior_nrml.png
+
+newmtl CSR2_InteriorA
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Interior_diff.png
+	map_Kd maps\Interior_diff.png
+	map_d maps\Interior_opac.png
+	map_bump maps\Interior_nrml.png
+	bump maps\Interior_nrml.png
+
+newmtl CSR2_InteriorTilling
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\InteriorTilling_diff.png
+	map_Kd maps\InteriorTilling_diff.png
+	map_bump maps\InteriorTilling_nrml.png
+	bump maps\InteriorTilling_nrml.png
+
+newmtl CSR2_Grille6
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Grille6_diff.png
+	map_Kd maps\Grille6_diff.png
+	map_d maps\Grille6_opac.png
+	map_bump maps\Grille6_nrml.png
+	bump maps\Grille6_nrml.png
+
+newmtl CSR2_Grille5
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Grille5_diff.png
+	map_Kd maps\Grille5_diff.png
+	map_d maps\Grille5_opac.png
+	map_bump maps\Grille5_nrml.png
+	bump maps\Grille5_nrml.png
+
+newmtl CSR2_Grille4
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Grille4_diff.png
+	map_Kd maps\Grille4_diff.png
+	map_d maps\Grille4_opac.png
+	map_bump maps\Grille4_nrml.png
+	bump maps\Grille4_nrml.png
+
+newmtl CSR2_Grille3
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Grille3_diff.png
+	map_Kd maps\Grille3_diff.png
+	map_d maps\Grille3_opac.png
+	map_bump maps\Grille3_nrml.png
+	bump maps\Grille3_nrml.png
+
+newmtl CSR2_Grille2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Grille2_diff.png
+	map_Kd maps\Grille2_diff.png
+	map_d maps\Grille2_opac.png
+	map_bump maps\Grille2_nrml.png
+	bump maps\Grille2_nrml.png
+
+newmtl CSR2_Grille1
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Grille1_diff.png
+	map_Kd maps\Grille1_diff.png
+	map_d maps\Grille1_opac.png
+	map_bump maps\Grille1_nrml.png
+	bump maps\Grille1_nrml.png
+
+newmtl CSR2_Engine
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Engine_diff.png
+	map_Kd maps\Engine_diff.png
+	map_bump maps\Engine_nrml.png
+	bump maps\Engine_nrml.png
+
+newmtl CSR2_EngineA
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Engine_diff.png
+	map_Kd maps\Engine_diff.png
+	map_d maps\Engine_opac.png
+	map_bump maps\Engine_nrml.png
+	bump maps\Engine_nrml.png
+
+newmtl CSR2_Base
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl CSR2_Badge
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Badge_diff.png
+	map_Kd maps\Badge_diff.png
+	map_d maps\Badge_opac.png
+	map_bump maps\Badge_nrml.png
+	bump maps\Badge_nrml.png
+
+newmtl CSR2_Wheel1A_Rim
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Wheel1A_diff.png
+	map_Kd maps\Wheel1A_diff.png
+	map_bump maps\Wheel1A_nrml.png
+	bump maps\Wheel1A_nrml.png
+
+newmtl CSR2_Wheel1A_Tire
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Wheel1A_diff.png
+	map_Kd maps\Wheel1A_diff.png
+	map_bump maps\Wheel1A_nrml.png
+	bump maps\Wheel1A_nrml.png
+
+newmtl CSR2_Wheel1A_Rotor
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\Wheel1A_diff.png
+	map_Kd maps\Wheel1A_diff.png
+	map_bump maps\Wheel1A_nrml.png
+	bump maps\Wheel1A_nrml.png
+
+newmtl CSR2_Calliper_Color
+	Ns 40.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5216 0.0000 0.0000
+	Kd 0.0037 0.0037 0.0037
+	Ks 0.4500 0.4500 0.4500
+	Ke 0.0000 0.0000 0.0000
+
+newmtl CSR2_Calliper_Textured
+	Ns 25.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0196 0.0196 0.0196
+	Kd 0.0196 0.0196 0.0196
+	Ks 0.0450 0.0450 0.0450
+	Ke 0.0000 0.0000 0.0000
+
+newmtl CSR2_CalliperBadge
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka maps\CalliperBadge_diff.png
+	map_Kd maps\CalliperBadge_diff.png
+	map_d maps\CalliperBadge_opac.png
