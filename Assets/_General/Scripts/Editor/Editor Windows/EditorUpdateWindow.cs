@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 namespace SterlingTools
 {
-	public class EditorUpdateWindow : EditorWindowWrapper
+	public class EditorUpdateWindow : EditorWindowExtended
 	{
 		private TextElement executablesCount;
 		private List<IExecuteInEditMode> executables;
