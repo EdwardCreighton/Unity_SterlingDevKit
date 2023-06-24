@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using SterlingTools;
 using UnityEngine;
+using System.Linq;
 
 namespace SterlingAssets
 {
@@ -29,51 +30,51 @@ namespace SterlingAssets
 		private void Awake()
 		{
 			if (gameLoopEntities == null) return;
-
-			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
-			{
-				if (gameLoopEntity.enabled) gameLoopEntity.OnAwake();
-			}
-		}
+            
+			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
+            {
+                gameLoopEntity.OnAwake();
+            }
+        }
 
 		private void Start()
 		{
 			if (gameLoopEntities == null) return;
-
-			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
-			{
-				if (gameLoopEntity.enabled) gameLoopEntity.OnStart();
-			}
-		}
+            
+			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
+            {
+                gameLoopEntity.OnStart();
+            }
+        }
 
 		private void Update()
 		{
 			if (gameLoopEntities == null) return;
-
-			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
-			{
-				if (gameLoopEntity.enabled) gameLoopEntity.OnUpdate();
-			}
-		}
+            
+			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
+            {
+                gameLoopEntity.OnUpdate();
+            }
+        }
 
 		private void LateUpdate()
 		{
 			if (gameLoopEntities == null) return;
 
-			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
-			{
-				if (gameLoopEntity.enabled) gameLoopEntity.OnLateUpdate();
-			}
+			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
+            {
+                gameLoopEntity.OnLateUpdate();
+            }
 		}
 
 		private void FixedUpdate()
 		{
 			if (gameLoopEntities == null) return;
 
-			foreach (GameLoopEntity gameLoopEntity in gameLoopEntities)
-			{
-				if (gameLoopEntity.enabled) gameLoopEntity.OnFixedUpdate();
-			}
+			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
+            {
+                gameLoopEntity.OnFixedUpdate();
+            }
 		}
 	}
 }
