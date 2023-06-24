@@ -47,7 +47,8 @@ namespace SterlingAssets
 			if (!data.followPoint) return;
 				
 			data.camera = GetComponent<Camera>();
-			controller.OnEditorSetup();
+            data.followTarget = data.followPoint.position;
+            controller.OnEditorSetup();
 		}
 	}
 }

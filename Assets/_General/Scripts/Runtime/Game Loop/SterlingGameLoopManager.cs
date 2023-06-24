@@ -11,7 +11,14 @@ namespace SterlingAssets
 		[ContextMenu("Collect Game-Loop Entities")]
 		private void CollectGameLoopEntities()
 		{
-			gameLoopEntities.Clear();
+			if (gameLoopEntities == null)
+			{
+				gameLoopEntities = new List<GameLoopEntity>();
+			}
+			else
+			{
+                gameLoopEntities.Clear();
+            }
 
 			GameLoopEntity[] tempEntities = FindObjectsOfType<GameLoopEntity>();
 
