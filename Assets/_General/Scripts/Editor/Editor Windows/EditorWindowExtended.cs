@@ -10,55 +10,43 @@ namespace SterlingTools
 		protected SerializedObject serializedObject;
 		protected SerializedProperty currentProperty;
 
-        protected void DrawProperty(SerializedProperty property)
+		protected void DrawProperty(string propertyName, string label = null)
+		{
+			SerializedProperty property = serializedObject.FindProperty(propertyName);
+            DrawProperty(property, label);
+        }
+
+        protected void DrawProperty(SerializedProperty property, string label = null)
         {
             if (property == null)
             {
-                Debug.LogError($"Can't draw property because it's null!");
+                Debug.LogError("Property does not exist!");
                 return;
             }
 
-            EditorGUILayout.PropertyField(property, true);
+            if (label != null)
+            {
+                EditorGUILayout.PropertyField(property, new GUIContent(label), true);
+            }
+            else
+            {
+                EditorGUILayout.PropertyField(property, true);
+            }
         }
-
-        protected void DrawProperty(SerializedProperty property, bool drawChildren)
-		{
-			if (property == null)
-			{
-				Debug.LogError($"Can't draw property because it's null!");
-				return;
-			}
-
-			string lastPropertyPath = string.Empty;
-
-            foreach (SerializedProperty internalProperty in property)
-			{
-				if (internalProperty.isArray && internalProperty.propertyType == SerializedPropertyType.Generic)
-				{
-					EditorGUILayout.BeginHorizontal();
-					internalProperty.isExpanded = EditorGUILayout.Foldout(internalProperty.isExpanded, internalProperty.displayName);
-					EditorGUILayout.EndHorizontal();
-
-					if (internalProperty.isExpanded)
-					{
-						EditorGUI.indentLevel++;
-						DrawProperty(internalProperty, drawChildren);
-						EditorGUI.indentLevel--;
-					}
-				}
-				else
-				{
-					if (!string.IsNullOrEmpty(lastPropertyPath) && internalProperty.propertyPath.Contains(lastPropertyPath)) continue;
-
-					lastPropertyPath = internalProperty.propertyPath;
-					EditorGUILayout.PropertyField(internalProperty, drawChildren);
-				}
-			}
-		}
 
         protected void ApplyProperties()
         {
             serializedObject.ApplyModifiedProperties();
+        }
+
+        protected void DrawButton(string buttonName, Action onClickAction)
+        {
+            if (GUILayout.Button(buttonName)) onClickAction.Invoke();
+        }
+
+        protected void DrawSpace(float val = 10f)
+        {
+            EditorGUILayout.Space(val);
         }
 
         protected VisualElement GetSpace(int size = 1)

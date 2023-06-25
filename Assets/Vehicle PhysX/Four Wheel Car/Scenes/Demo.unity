@@ -770,6 +770,38 @@ Transform:
   m_Father: {fileID: 955581395}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &66216854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 66216855}
+  m_Layer: 0
+  m_Name: Car Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &66216855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66216854}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 761436143}
+  m_Father: {fileID: 513800781}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &104155252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3411,6 +3443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513800781}
   - component: {fileID: 513800782}
+  - component: {fileID: 513800783}
   m_Layer: 0
   m_Name: Car Controller Prototype
   m_TagString: Untagged
@@ -3431,6 +3464,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 779459435}
+  - {fileID: 66216855}
+  - {fileID: 1962550366}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3446,7 +3481,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66628c4b71c3fb9478d18ff23a4318d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheelComponents: []
+  vehicleRigidbody: {fileID: 513800783}
+  vehicleColliders: []
+  tyreFL: {fileID: 2909902356501217865}
+  hubcapFL: {fileID: 1532118316}
+  caliperFL: {fileID: 1532118315}
+  brakeDiskFL: {fileID: 1532118314}
+  tyreFR: {fileID: 1532118313}
+  hubcapFR: {fileID: 1532118312}
+  caliperFR: {fileID: 1532118311}
+  brakeDiskFR: {fileID: 1532118310}
+  tyreRL: {fileID: 1532118309}
+  hubcapRL: {fileID: 1532118308}
+  caliperRL: {fileID: 1532118307}
+  brakeDiskRL: {fileID: 1532118306}
+  tyreRR: {fileID: 1532118305}
+  hubcapRR: {fileID: 1532118304}
+  caliperRR: {fileID: 1532118303}
+  brakeDiskRR: {fileID: 1532118302}
+  suspensionProfile: {fileID: 11400000, guid: 70e4aff4767e3b74e91df48a60199790, type: 2}
+  frictionProfile: {fileID: 11400000, guid: 789abf4678759eb4f8f647238740d992, type: 2}
+  wheelComponentFL: {fileID: 0}
+  wheelComponentFR: {fileID: 0}
+  wheelComponentRL: {fileID: 0}
+  wheelComponentRR: {fileID: 0}
+--- !u!54 &513800783
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513800780}
+  serializedVersion: 2
+  m_Mass: 1800
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 3
 --- !u!1 &533720637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,6 +3844,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549106254}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &554654413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554654414}
+  - component: {fileID: 554654415}
+  m_Layer: 0
+  m_Name: R34 Tyre (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &554654414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554654413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.682, y: 0.289, z: -1.006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962550366}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &554654415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554654413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7abd4f5cbc262a4f86f5e92ae8e642a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tyreTransform: {fileID: 0}
+  hubcapTransform: {fileID: 0}
+  caliperTransform: {fileID: 0}
+  brakeDiskTransform: {fileID: 0}
 --- !u!1 &566409331
 GameObject:
   m_ObjectHideFlags: 0
@@ -5346,6 +5468,61 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759266910}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &761436142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761436143}
+  - component: {fileID: 761436145}
+  - component: {fileID: 761436144}
+  m_Layer: 0
+  m_Name: Base (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761436143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761436142}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 66216855}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &761436144
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761436142}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7502062360588196698, guid: 5013e603c26555647824ef6471bfd23b, type: 3}
+--- !u!33 &761436145
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761436142}
+  m_Mesh: {fileID: 7502062360588196698, guid: 5013e603c26555647824ef6471bfd23b, type: 3}
 --- !u!1 &772592868
 GameObject:
   m_ObjectHideFlags: 0
@@ -5550,7 +5727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779459435}
   m_Layer: 0
-  m_Name: Car
+  m_Name: Car Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7617,6 +7794,54 @@ Transform:
   m_Father: {fileID: 955581395}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1129959605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129959606}
+  - component: {fileID: 1129959607}
+  m_Layer: 0
+  m_Name: R34 Tyre (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129959606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129959605}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.59, y: 0.289, z: -1.006}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962550366}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1129959607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129959605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7abd4f5cbc262a4f86f5e92ae8e642a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tyreTransform: {fileID: 0}
+  hubcapTransform: {fileID: 0}
+  caliperTransform: {fileID: 0}
+  brakeDiskTransform: {fileID: 0}
 --- !u!1 &1160974844
 GameObject:
   m_ObjectHideFlags: 0
@@ -9906,6 +10131,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530321512}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1532118302 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7525392261224259162, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1011214148745424309, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118304 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3162331399567680951, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118305 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2109390387979425709, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118306 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7525392259657933536, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118307 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1011214149856629007, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118308 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3162331399891441933, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118309 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2109390387943533335, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118310 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7525392259485190816, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1011214150165723471, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118312 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3162331400265511245, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2109390387633914711, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6102698672786595261, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3663178667361463890, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1532118316 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1674336138640500304, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1543635714
 GameObject:
   m_ObjectHideFlags: 0
@@ -10519,6 +10819,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587544802}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1588705313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588705314}
+  - component: {fileID: 1588705315}
+  m_Layer: 0
+  m_Name: R34 Tyre (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1588705314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588705313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.59, y: 0.289, z: 1.261}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962550366}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1588705315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588705313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7abd4f5cbc262a4f86f5e92ae8e642a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tyreTransform: {fileID: 0}
+  hubcapTransform: {fileID: 0}
+  caliperTransform: {fileID: 0}
+  brakeDiskTransform: {fileID: 0}
 --- !u!1 &1604008032
 GameObject:
   m_ObjectHideFlags: 0
@@ -12290,6 +12638,41 @@ Transform:
   m_Father: {fileID: 955581395}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1962550365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1962550366}
+  m_Layer: 0
+  m_Name: Wheel Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1962550366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962550365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2032902070}
+  - {fileID: 1588705314}
+  - {fileID: 554654414}
+  - {fileID: 1129959606}
+  m_Father: {fileID: 513800781}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1970936611
 GameObject:
   m_ObjectHideFlags: 0
@@ -12838,6 +13221,54 @@ Transform:
   m_Father: {fileID: 955581395}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2032902069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2032902070}
+  - component: {fileID: 2032902071}
+  m_Layer: 0
+  m_Name: R34 Tyre (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2032902070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032902069}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.682, y: 0.289, z: 1.261}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962550366}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032902071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032902069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7abd4f5cbc262a4f86f5e92ae8e642a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tyreTransform: {fileID: 0}
+  hubcapTransform: {fileID: 0}
+  caliperTransform: {fileID: 0}
+  brakeDiskTransform: {fileID: 0}
 --- !u!1 &2043153064
 GameObject:
   m_ObjectHideFlags: 0
@@ -13857,10 +14288,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 2909902356501217862}
   emissionEnabled: 0
-  colorOffState: {r: 0, g: 0, b: 0, a: 0}
-  colorOnState: {r: 16, g: 5.8980393, b: 0, a: 0}
+  colorOffState:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  colorOnState:
+    r: 16
+    g: 5.8980393
+    b: 0
+    a: 0
+  material: {fileID: 0}
 --- !u!4 &2909902356501217864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2909902356802710147, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
+  m_PrefabInstance: {fileID: 2909902356501217860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2909902356501217865 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2420890538026505290, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
   m_PrefabInstance: {fileID: 2909902356501217860}
   m_PrefabAsset: {fileID: 0}

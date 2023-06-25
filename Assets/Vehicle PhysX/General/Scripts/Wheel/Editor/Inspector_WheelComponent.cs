@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 namespace SterlingTools
 {
-	[CustomEditor(typeof(WheelComponent))]
+    [CustomEditor(typeof(WheelComponent))]
 	[CanEditMultipleObjects]
 	public class Inspector_WheelComponent : Editor
 	{
