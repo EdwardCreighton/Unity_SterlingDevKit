@@ -2885,6 +2885,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390680082}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &394891775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394891776}
+  m_Layer: 0
+  m_Name: Pivots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &394891776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394891775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 418728035}
+  m_Father: {fileID: 513800781}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &418215060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,6 +3014,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418215060}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &418728034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418728035}
+  m_Layer: 0
+  m_Name: Camera Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &418728035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418728034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.902, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 394891776}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427052067
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,6 +3529,7 @@ Transform:
   - {fileID: 779459435}
   - {fileID: 66216855}
   - {fileID: 1962550366}
+  - {fileID: 394891776}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3855,7 +3919,7 @@ GameObject:
   - component: {fileID: 554654414}
   - component: {fileID: 554654415}
   m_Layer: 0
-  m_Name: R34 Tyre (3)
+  m_Name: R34 Tyre RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4970,7 +5034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameLoopEntities:
-  - {fileID: 0}
+  - {fileID: 513800782}
   - {fileID: 1300076397}
 --- !u!114 &742609181
 MonoBehaviour:
@@ -7805,7 +7869,7 @@ GameObject:
   - component: {fileID: 1129959606}
   - component: {fileID: 1129959607}
   m_Layer: 0
-  m_Name: R34 Tyre (4)
+  m_Name: R34 Tyre RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8474,9 +8538,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60
+  field of view: 65
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -8501,8 +8565,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300076392}
-  m_LocalRotation: {x: -0.03403221, y: -0.22141357, z: -0.0077319313, w: 0.9745553}
-  m_LocalPosition: {x: 2.8119993, y: -1.3350973, z: -2.6710799}
+  m_LocalRotation: {x: 0.12407262, y: -0.256675, z: 0.033245154, w: 0.9579242}
+  m_LocalPosition: {x: 2.5383685, y: -0.18975925, z: -1.5848811}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8521,9 +8585,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78adda93b97bd2d4f91839bf0ef0eeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 4
-  pitchHigh: 5
-  pitchLow: -45
+  distance: 3
+  pitchHigh: 7
+  pitchLow: -15
   pitchSensitivity: 5
   yawSensitivity: 12
 --- !u!114 &1300076397
@@ -8540,12 +8604,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
     camera: {fileID: 1300076394}
-    followPoint: {fileID: 0}
-    followTarget: {x: 0, y: 0.8, z: 0}
-    followOffset: {x: 0.43103334, y: -0.06975646, z: -0.8996357}
-    lookAtTarget: {x: 0, y: 0.8, z: 0}
+    followPoint: {fileID: 418728035}
+    followTarget: {x: 0, y: 0.902, z: 0}
+    followOffset: {x: 0.4835008, y: 0.25477073, z: -0.837448}
+    lookAtTarget: {x: 0, y: 0.902, z: 0}
     inputDelta: {x: 0, y: 0, z: 0}
-    followOffsetEulerAngles: {x: 4, y: 154.4}
+    followOffsetEulerAngles: {x: -14.76, y: 150}
     lookAtTargetEulerAngles: {x: 0, y: 0}
 --- !u!114 &1300076398
 MonoBehaviour:
@@ -10830,7 +10894,7 @@ GameObject:
   - component: {fileID: 1588705314}
   - component: {fileID: 1588705315}
   m_Layer: 0
-  m_Name: R34 Tyre (2)
+  m_Name: R34 Tyre FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13232,7 +13296,7 @@ GameObject:
   - component: {fileID: 2032902070}
   - component: {fileID: 2032902071}
   m_Layer: 0
-  m_Name: R34 Tyre (1)
+  m_Name: R34 Tyre FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14269,11 +14333,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5646940194440749690, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
   m_PrefabInstance: {fileID: 2909902356501217860}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &2909902356501217862 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 99751054129391122, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}
-  m_PrefabInstance: {fileID: 2909902356501217860}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2909902356501217863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14286,19 +14345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c5dd04aaccc164980c7b4f827e51d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 2909902356501217862}
-  emissionEnabled: 0
-  colorOffState:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
-  colorOnState:
-    r: 16
-    g: 5.8980393
-    b: 0
-    a: 0
-  material: {fileID: 0}
 --- !u!4 &2909902356501217864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2909902356802710147, guid: 34bc11482e5f3cc43b59ffc41c927bb0, type: 3}

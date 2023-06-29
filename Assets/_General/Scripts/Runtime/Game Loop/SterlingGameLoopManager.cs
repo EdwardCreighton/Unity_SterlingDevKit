@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using SterlingTools;
 using UnityEngine;
-using System.Linq;
 
 namespace SterlingAssets
 {
@@ -9,6 +8,7 @@ namespace SterlingAssets
 	{
 		[SerializeField] private List<GameLoopEntity> gameLoopEntities;
 
+		// TODO: Move this method to custom editor
 		[ContextMenu("Collect Game-Loop Entities")]
 		private void CollectGameLoopEntities()
 		{
@@ -29,52 +29,27 @@ namespace SterlingAssets
 
 		private void Awake()
 		{
-			if (gameLoopEntities == null) return;
-            
-			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
-            {
-                gameLoopEntity?.OnAwake();
-            }
+			gameLoopEntities?.CallGameLoopEntity((gameLoopEntity) => gameLoopEntity.OnAwake());
         }
 
 		private void Start()
 		{
-			if (gameLoopEntities == null) return;
-            
-			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
-            {
-                gameLoopEntity?.OnStart();
-            }
+			gameLoopEntities?.CallGameLoopEntity((gameLoopEntity) => gameLoopEntity.OnStart());
         }
 
 		private void Update()
 		{
-			if (gameLoopEntities == null) return;
-            
-			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
-            {
-                gameLoopEntity?.OnUpdate();
-            }
+			gameLoopEntities?.CallGameLoopEntity((gameLoopEntity) => gameLoopEntity.OnUpdate());
         }
 
 		private void LateUpdate()
 		{
-			if (gameLoopEntities == null) return;
-
-			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
-            {
-                gameLoopEntity?.OnLateUpdate();
-            }
+			gameLoopEntities?.CallGameLoopEntity((gameLoopEntity) => gameLoopEntity.OnLateUpdate());
 		}
 
 		private void FixedUpdate()
 		{
-			if (gameLoopEntities == null) return;
-
-			foreach (var gameLoopEntity in gameLoopEntities.Where(gameLoopEntity => gameLoopEntity.BehaviourEnabled))
-            {
-                gameLoopEntity?.OnFixedUpdate();
-            }
+			gameLoopEntities?.CallGameLoopEntity((gameLoopEntity) => gameLoopEntity.OnFixedUpdate());
 		}
 	}
 }
