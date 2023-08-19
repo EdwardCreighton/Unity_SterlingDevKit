@@ -12,6 +12,8 @@ namespace SterlingTools
 
 		protected void DrawProperty(string propertyName, string label = null)
 		{
+			if (serializedObject == null) return;
+			
 			SerializedProperty property = serializedObject.FindProperty(propertyName);
             DrawProperty(property, label);
         }
@@ -36,6 +38,8 @@ namespace SterlingTools
 
         protected void ApplyProperties()
         {
+	        if (serializedObject == null) return;
+	        
             serializedObject.ApplyModifiedProperties();
         }
 

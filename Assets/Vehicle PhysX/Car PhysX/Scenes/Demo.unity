@@ -5013,9 +5013,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7333e543c48b75940bd4eb8de73e823f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounds: {x: 180, y: 180}
-  objects:
-  - {fileID: 0}
+  bounds: {x: 180, y: 50, z: 180}
+  targets: []
 --- !u!4 &545918561
 Transform:
   m_ObjectHideFlags: 0

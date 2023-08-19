@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace SterlingTools
@@ -7,20 +8,22 @@ namespace SterlingTools
 	[DefaultExecutionOrder(100)]
 	public class TiledSceneTeleport : MonoBehaviour
 	{
-		#region Fields
+		[SerializeField] private Vector3 bounds;
+		[SerializeField] private List<Transform> targets;
 
-		[SerializeField] private Vector2 bounds;
-		[SerializeField] private List<Transform> objects;
+		public List<Transform> Targets
+		{
+			get => targets;
+			set => targets = value;
+		}
 
-		#endregion
-		
 		private void FixedUpdate()
 		{
-			foreach (Transform obj in objects)
+			foreach (Transform target in Targets.Where((x) => x))
 			{
 				bool tp = false;
 				
-				Vector3 relPos = obj.position - transform.position;
+				Vector3 relPos = target.position - transform.position;
 				Vector3 newPos = relPos;
 				
 				if (Mathf.Abs(relPos.x) > bounds.x / 2f)
@@ -29,19 +32,25 @@ namespace SterlingTools
 					newPos.x -= bounds.x * Mathf.Sign(relPos.x);
 				}
 
-				if (Math.Abs(relPos.z) > bounds.y / 2f)
+				if (Mathf.Abs(relPos.y) > bounds.y / 2f)
 				{
 					tp = true;
-					newPos.z -= bounds.y * Mathf.Sign(relPos.z);
+					newPos.y -= bounds.y * Mathf.Sign(relPos.y);
 				}
 
-				if (tp) obj.position = newPos + transform.position;
+				if (Math.Abs(relPos.z) > bounds.z / 2f)
+				{
+					tp = true;
+					newPos.z -= bounds.z * Mathf.Sign(relPos.z);
+				}
+
+				if (tp) target.position = newPos + transform.position;
 			}
 		}
 
 		private void OnDrawGizmosSelected()
 		{
-			Gizmos.DrawWireCube(transform.position, new Vector3(bounds.x, 5f, bounds.y));
+			Gizmos.DrawWireCube(transform.position, new Vector3(bounds.x, bounds.y, bounds.z));
 		}
 	}
 }
