@@ -22,7 +22,7 @@ namespace SterlingTools
         {
             if (property == null)
             {
-                Debug.LogError("Property does not exist!");
+                Debug.LogError($"Property {label} does not exist!");
                 return;
             }
 
